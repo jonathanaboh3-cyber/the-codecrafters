@@ -9,15 +9,21 @@ func main() {
 	fmt.Println("----------WELCOME TO JONATHAN'S CALCULATION SYSTEM----------")
 	for {
 		var quit string
-		
-		fmt.Println("type quit to exit or type continue for the rest of tne operations")
-		
+
+		fmt.Println("type quit to exit or type continue to goahead or type help to show menu")
+
 		fmt.Scan(&quit)
 		if quit == "quit" {
 			fmt.Println("Goodbye Codecrafters! ")
 			break
-		} else {
-			fmt.Println("continue operations")
+		}
+		if quit == "help" {
+
+			fmt.Println("For Addition: index, operation, index. eg (1 + 1)")
+			fmt.Println("For Subtraction: index, operation, index. eg (1 - 1)")
+			fmt.Println("For Division: index, operation, index. eg (1 / 1)")
+			fmt.Println("For Multiplication: index, operation, index. eg (1 * 1)")
+
 			goto start
 		}
 
@@ -27,15 +33,18 @@ func main() {
 		fmt.Scan(&input)
 		num1, err := strconv.Atoi(input)
 		if err != nil {
-		fmt.Println("only numbers allowed")
-		goto start
+			fmt.Println("Invalid input only want digit", err)
+			continue
 		}
 
 		var operator string
 		fmt.Println("enter an operator: +, -, /, *,")
 		fmt.Scan(&operator)
-		if operator != ("+, *, -, /") {
-			fmt.Println("invalid operator")
+		if operator == "+" || operator == "*" || operator == "-" || operator == "/" {
+			fmt.Println("let continue operator")
+		} else if operator != "+" || operator != "*" || operator != "-" || operator != "/" {
+			fmt.Println("Invalid operation")
+			goto start
 		}
 
 		var index string
@@ -43,8 +52,8 @@ func main() {
 		fmt.Scan(&index)
 		num2, err := strconv.Atoi(index)
 		if err != nil {
-		fmt.Println("only numbers allowed")
-		goto start
+			fmt.Println("Invalid input only want digit", err)
+			continue
 		}
 
 		if operator == "+" {
@@ -68,8 +77,6 @@ func main() {
 			}
 
 		}
-		
-		
 
 	}
 
