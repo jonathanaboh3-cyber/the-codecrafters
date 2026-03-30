@@ -10,8 +10,11 @@ func main() {
 	for {
 		var quit string
 
-		fmt.Println("type quit to exit or type continue to goahead or type help to show menu")
-
+		fmt.Println("type quit to exit")  
+        fmt.Println("-------OR-------")
+	    fmt.Println("type continue to goahead")
+	   fmt.Println("--------OR---------")
+	   fmt.Println("type help to show menu")
 		fmt.Scan(&quit)
 		if quit == "quit" {
 			fmt.Println("Goodbye Codecrafters! ")
