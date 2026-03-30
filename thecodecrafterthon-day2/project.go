@@ -11,6 +11,7 @@ import (
 
 func main() {
     scanner := bufio.NewScanner(os.Stdin)
+    fmt.Println("--------- Welcome To Jonathan's Converting System-------")
 
     for {
         fmt.Print("> ")
