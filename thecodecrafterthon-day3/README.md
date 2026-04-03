@@ -1,5 +1,5 @@
 # == ABOUT THE ENGINEER ==
-My name is sunday attah, i belong to the pointer squad.
+My name is Jonathan Ahubi, i belong to the team called channels.
 
 ***what the program does***
 the porgram  is all about recovering a the processing unit which crash days ago, so for this program strings is the weapon so we use strings to recover.
